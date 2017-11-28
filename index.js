@@ -25,7 +25,7 @@ $(document).ready(function() {
 
     $('#source').submit(function(event) {
         event.preventDefault();
-        alert(document.getElementById("selection").value);
+        // alert(document.getElementById("selection").value);
         
         $.ajax({
             method: "GET",
@@ -37,10 +37,13 @@ $(document).ready(function() {
                     console.log(data2);
                 
                     for (var i=0; i < data2.articles.length; i++){
-                        var displaynews = document.createElement("P");
-                        displaynews.setAttribute('id', "HL" + i);
-                        displaynews.innerHTML = data2.articles[i].description;
+                        var displaynews = document.createElement("DIV");
+                        // displaynews.setAttribute('id', "HL" + i);
+                        displaynews.innerHTML = data2.articles[i].title;
+                        var descrip = document.createElement("P");
+                        descrip.innerHTML = data2.articles[i].description;
                         document.getElementById('source').appendChild(displaynews);
+                        document.getElementById('source').appendChild(descrip);
                     }
                 }
             }
