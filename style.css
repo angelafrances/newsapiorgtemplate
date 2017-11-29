@@ -1,0 +1,12 @@
+body {
+    font-family: 'Montserrat', serif !important;
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+}
+
+img {
+    border-radius: 12px;
+    max-width: 60%;
+}
+

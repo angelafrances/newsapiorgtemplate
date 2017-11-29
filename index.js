@@ -39,9 +39,16 @@ $(document).ready(function() {
                     for (var i=0; i < data2.articles.length; i++){
                         var displaynews = document.createElement("DIV");
                         // displaynews.setAttribute('id', "HL" + i);
-                        displaynews.innerHTML = data2.articles[i].title;
-                        var descrip = document.createElement("P");
+                        var newstitle = document.createElement('H2')
+                        newstitle.innerHTML = data2.articles[i].title;
+                        displaynews.appendChild(newstitle);
+                        var newsimage = document.createElement("IMG");
+                        newsimage.setAttribute('src', data2.articles[i].urlToImage);
+                        // console.log(newsimage);
+                        displaynews.appendChild(newsimage);
+                        var descrip = document.createElement("DIV");
                         descrip.innerHTML = data2.articles[i].description;
+                        
                         document.getElementById('source').appendChild(displaynews);
                         document.getElementById('source').appendChild(descrip);
                     }
