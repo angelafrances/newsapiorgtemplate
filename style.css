@@ -1,16 +1,13 @@
 body {
     font-family: 'Montserrat', serif;
     background-color: #ffffff;
-    font-size: 12px;
+    font-size: 20px;
 }
 
 img {
     border-radius: 12px;
-    width: 100%;
+    width: 80%;
     /*height: 50%;*/
 }
 
-#newsbox {
-    width: 30%;
-    font-size: 20px !important;   
-}
+
