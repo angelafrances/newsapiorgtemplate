@@ -1,12 +1,16 @@
 body {
-    font-family: 'Montserrat', serif !important;
+    font-family: 'Montserrat', serif;
     background-color: #ffffff;
-    text-align: center;
     font-size: 12px;
 }
 
 img {
     border-radius: 12px;
-    max-width: 60%;
+    width: 100%;
+    /*height: 50%;*/
 }
 
+#newsbox {
+    width: 30%;
+    font-size: 20px !important;   
+}

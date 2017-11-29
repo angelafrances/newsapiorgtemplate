@@ -38,6 +38,7 @@ $(document).ready(function() {
                 
                     for (var i=0; i < data2.articles.length; i++){
                         var displaynews = document.createElement("DIV");
+                        displaynews.setAttribute('id', 'newsbox');
                         // displaynews.setAttribute('id', "HL" + i);
                         var newstitle = document.createElement('H2')
                         newstitle.innerHTML = data2.articles[i].title;
@@ -46,11 +47,11 @@ $(document).ready(function() {
                         newsimage.setAttribute('src', data2.articles[i].urlToImage);
                         // console.log(newsimage);
                         displaynews.appendChild(newsimage);
-                        var descrip = document.createElement("DIV");
+                        var descrip = document.createElement("P");
                         descrip.innerHTML = data2.articles[i].description;
-                        
+                        displaynews.appendChild(descrip);
                         document.getElementById('source').appendChild(displaynews);
-                        document.getElementById('source').appendChild(descrip);
+      
                     }
                 }
             }
